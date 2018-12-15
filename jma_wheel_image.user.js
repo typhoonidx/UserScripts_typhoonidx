@@ -12,7 +12,7 @@
 // @version     1.0
 // @require     https://code.jquery.com/jquery-3.3.1.min.js
 // @grant       none
-// @description 気象庁の衛星画像をホイールで前後にぱらぱらめくる
+// @description 気象庁の衛星画像/天気図をホイールで前後にぱらぱらめくる
 // ==/UserScript==
 
 function handler(e){
