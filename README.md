@@ -8,6 +8,8 @@
 3. 気象庁の衛星画像/天気図のページに行く。https://www.jma.go.jp/jp/gms/index.html
 4. 画像の上でマウスホイールを上下に回す。
 5. 画像が切り替わる。（画像読み込みの分だけ最初はかくつきます）
+6. こういうふうにぬるぬる動けば成功です。
+https://ss1.xrea.com/ywq2hxmb.s1007.xrea.com/souko/ice_video_20181218-123233.webm
 
 Copyright
 ========================
