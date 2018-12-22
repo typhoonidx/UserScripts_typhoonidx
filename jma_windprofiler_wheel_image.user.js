@@ -23,3 +23,7 @@ $("#lbl_img_main").off('wheel');
 $("#lbl_img_main").on('wheel', handler);
 //$("#image").addEventListener('wheel', handler, true);
 
+// 画像読み込み中の画像がちらつくので無効化
+showLoading = function(){
+    return false;
+}
