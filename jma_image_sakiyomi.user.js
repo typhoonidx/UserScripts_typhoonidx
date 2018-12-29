@@ -10,7 +10,6 @@
 // @author      typhoonidx
 // @license     GPL 3.0
 // @version     1.0
-// @require     https://code.jquery.com/jquery-3.3.1.min.js
 // @grant       none
 // @description 画像先読み（jma_wheel_image.user.jsの拡張スクリプト）
 // ==/UserScript==
@@ -18,35 +17,31 @@
 console.log("jma_image_sakiyomi start!");
 var g_imgcount = 0;
 
-/*
-window.onload = function() {
-  g_imgcount = 0;
-};
-*/
 
 function main()
 {
 	console.log("main start!");
 
 	var option_index = 0;
-	$("#slt_time > option").each( function() {
-		value = $(this).val()
+	document.querySelectorAll("#slt_time > option").forEach( function(elem) {
+		var value = elem.value;
 		//console.log("value="+value);
 		// value=201812200300
 
-		selected_index = $("#slt_time").prop("selectedIndex");
+		var selected_index = document.querySelector("#slt_time").selectedIndex;
 		console.log("selected_index="+selected_index);
 
-		baseurl = "https://www.jma.go.jp/jp/gms/imgs/6/infrared/1/";
+		var baseurl = "https://www.jma.go.jp/jp/gms/imgs/6/infrared/1/";
 
 
 		// https://www.jma.go.jp/jp/gms/imgs/6/infrared/1/201812200250-00.png
-		main_image_src = $("#image").attr('src');
+		var main_image = document.querySelector("#image");
+		var main_image_src = main_image.getAttribute('src');
 		var index = main_image_src.lastIndexOf("/");
 		baseurl = main_image_src.substring( 0, index + 1);
 		console.log("baseurl="+baseurl);
 
-		imgurl = baseurl + value + "-00.png";
+		var imgurl = baseurl + value + "-00.png";
 		//console.log("imgurl="+imgurl);
 
 		var start = selected_index - 5;
@@ -59,7 +54,11 @@ function main()
 				style: "display:none;",
 			}));
 */
-			$("<img src=\"" + imgurl + "\">");
+			//$("<img src=\"" + imgurl + "\">");
+			var img = document.createElement("img");
+			img.src = imgurl;
+			main_image.appendChild(img);
+
 			g_imgcount ++;
 			console.log("setimg, imgurl="+imgurl);
 		}

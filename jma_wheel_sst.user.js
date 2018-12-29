@@ -5,13 +5,12 @@
 // @author      typhoonidx
 // @license     GPL 3.0
 // @version     1.0
-// @require     https://code.jquery.com/jquery-3.3.1.min.js
 // @grant       none
 // @description 気象庁の海面水温をホイールで前後にぱらぱらめくる
 // ==/UserScript==
 
 function handler(e){
-	if (e.originalEvent.deltaY < 0) {
+	if (e.deltaY < 0) {
 		ShiftTime(-1); // この関数は気象庁のページで定義されています。
 	} else {
 		ShiftTime(1); // この関数は気象庁のページで定義されています。
@@ -19,6 +18,6 @@ function handler(e){
 	e.preventDefault();
 }
 
-$("#right > img").off('wheel');
-$("#right > img").on('wheel', handler);
-
+//$("#right > img").off('wheel');
+//$("#right > img").on('wheel', handler);
+document.querySelector("#right > img").addEventListener('wheel', handler);

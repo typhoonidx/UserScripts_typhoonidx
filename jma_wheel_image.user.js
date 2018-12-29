@@ -10,19 +10,13 @@
 // @author      typhoonidx
 // @license     GPL 3.0
 // @version     1.0
-// @require     https://code.jquery.com/jquery-3.3.1.min.js
 // @grant       none
 // @description 気象庁の衛星画像/天気図をホイールで前後にぱらぱらめくる
 // ==/UserScript==
 
 function handler(e){
-	//var evt=window.event || e; //equalize event object
-	//var delta=evt.detail? evt.detail*(-120) : evt.wheelDelta; //delta returns 
-//console.log("delta="+delta);
-//console.log("e.deltaY="+e.deltaY);
-//console.log("e.originalEvent.deltaY="+e.originalEvent.deltaY);
-	//if ( delta <= -120 ) {
-	if (e.originalEvent.deltaY < 0) {
+
+	if (e.deltaY < 0) {
 		prevImage(); // この関数は気象庁のページで定義されています。
 	} else {
 		nextImage(); // この関数は気象庁のページで定義されています。
@@ -30,7 +24,6 @@ function handler(e){
 	e.preventDefault();
 }
 
-$("#image").off('wheel');
-$("#image").on('wheel', handler);
-//$("#image").addEventListener('wheel', handler, true);
-
+//$("#image").off('wheel');
+//$("#image").on('wheel', handler);
+document.querySelector("#image").addEventListener('wheel', handler);
