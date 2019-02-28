@@ -9,14 +9,14 @@
 // @include     https://www.jma.go.jp/jp/g3/*
 // @author      typhoonidx
 // @license     GPL 3.0
-// @version     1.0
+// @version     1.1
 // @grant       none
 // @description 気象庁の衛星画像/天気図をホイールで前後にぱらぱらめくる
 // ==/UserScript==
 
 function handler(e){
-
-	if (e.deltaY < 0) {
+console.log(e.deltaY);  // この値
+	if (e.deltaY <= 0) {
 		prevImage(); // この関数は気象庁のページで定義されています。
 	} else {
 		nextImage(); // この関数は気象庁のページで定義されています。
