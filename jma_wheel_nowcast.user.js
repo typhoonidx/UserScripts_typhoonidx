@@ -26,3 +26,44 @@ document.querySelector("#lbl_img_main").addEventListener('wheel', handler);
 showLoading = function(){
     return false;
 }
+/**
+ * イメージを一つ取得
+ */
+getSimpleImg = function() {
+    var ObjMainImg = cGetObject(gMainImgID);
+    
+	var tmpClass = "";
+	if ( NowDisArea == 0 ) {
+    	tmpClass='img_japan';
+	} else {
+    	tmpClass='img_place';
+    }
+    
+    /* Loadingイメージを表示 */
+    //ObjMainImg.src = LoadingImg.src;
+    var imageTmp = new Image();
+	if (NowDisContentType==0) {
+		imageTmp.src = ImageRootPath[0] + FolderInfoB[NowDisArea] + NowImageNames[NowDisTime];
+		var appendStr = '_nowcast';
+		if ( NowDisTime > NewestImageIndex ) {
+			imageTmp.src = ImageRootPath[2] + FolderInfoB[NowDisArea] + NowImageNames[NowDisTime];
+			appendStr = "";
+		}
+		tmpClass = tmpClass + appendStr;
+	}
+	if (NowDisContentType==1) {
+		imageTmp.src = ImageRootPath[24] + FolderInfoB[NowDisArea] + NowImageNames[NowDisTime];
+		if ( NowDisTime > NewestImageIndex ) {
+			imageTmp.src = ImageRootPath[25] + FolderInfoB[NowDisArea] + NowImageNames[NowDisTime];
+		}
+	}
+	if (NowDisContentType==2) {
+		imageTmp.src = ImageRootPath[26] + FolderInfoB[NowDisArea] + NowImageNames[NowDisTime];
+		if ( NowDisTime > NewestImageIndex ) {
+			imageTmp.src = ImageRootPath[27] + FolderInfoB[NowDisArea] + NowImageNames[NowDisTime];
+		}
+	}
+
+	ObjMainImg.className = tmpClass;
+    ObjMainImg.src = imageTmp.src;
+}
