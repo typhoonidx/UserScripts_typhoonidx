@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        sunnyspot_wheel_image
 // @namespace   http://typhoonidx.org/sunnyspot_wheel_image.user.js
-// @include     https://www.sunny-spot.net/emagram/*
+// @match       https://www.sunny-spot.net/emagram/*
 // @author      typhoonidx
 // @license     GPL 3.0
 // @version     1.0

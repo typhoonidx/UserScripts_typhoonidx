@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        fnmoc_wheel
 // @namespace   http://typhoonidx.org/fnmoc_wheel.user.js
-// @include     https://www.fnmoc.navy.mil/wxmap_cgi/cgi-bin/wxmap_single.cgi?*
+// @match       https://www.fnmoc.navy.mil/wxmap_cgi/cgi-bin/wxmap_single.cgi?*
 // @author      typhoonidx
 // @license     GPL 3.0
 // @version     1.0

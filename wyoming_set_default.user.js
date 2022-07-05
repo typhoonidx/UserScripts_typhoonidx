@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        wyoming_set_default
 // @namespace   http://typhoonidx.org/wyoming_set_default.user.js
-// @include     http://weather.uwyo.edu/upperair/*
+// @match       *://weather.uwyo.edu/upperair/*
 // @author      typhoonidx
 // @license     GPL 3.0
 // @version     1.0

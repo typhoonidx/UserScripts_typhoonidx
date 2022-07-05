@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        jma_wheel_image2
 // @namespace   http://typhoonidx.org/jma_wheel_image.user.js
-// @include     https://www.jma.go.jp/bosai/weather_map/
+// @match       https://www.jma.go.jp/bosai/weather_map/
 // @author      typhoonidx
 // @require     https://code.jquery.com/jquery-3.5.1.min.js
 // @license     GPL 3.0
